@@ -91,6 +91,30 @@ body{
     }
 }
 
+.heading1small{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 56px;
+    color: #002529;
+}
+
+.heading2{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    color: #002529;
+}
+
+.heading3{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    color: #002529;
+}
+
 .body1{
     font-style: normal;
     font-weight: 600;
@@ -147,7 +171,7 @@ body{
 }
 .content{
     @include flex(flex-end, space-between, auto);
-    @include background(url(../images/hero2-3.png), 358px 100px, no-repeat, bottom right);
+    @include background(url(../images/hero2.svg), 358px 100px, no-repeat, bottom right);
     padding-bottom: 250px;
     &__title{
         max-width: 605px;
@@ -171,5 +195,84 @@ body{
         }
     }
 }
+// ***************************************************************************************************
+
+.management{
+    background-color: $stateGreen;
+    background-image: url(../images/section2.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 244px;
+    background-position: bottom right;
+
+    &__inner{
+        @include flex(flex-start, space-between, auto);
+        padding-top: 190px;
+        padding-bottom: 140px;
+
+        .management-left{
+            position: relative;
+            .management-left__title{
+                width: 445px;
+                color: $white;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: -54px;
+                left: 0;
+                width: 50px;
+                height: 4px;
+                background-color: $lightCoral;
+                @extend %transition;
+            }
+
+            &:hover::before{
+                background-color: $white;
+            }
+        }
+    }
+
+    .management-right{
+
+        &__tasks{
+            @include flex(center, auto, row)
+            margin-bottom: 32px;
+
+            .tasks-image{
+                width: 56px;
+                height: 56px;
+                background: #2C6269;
+                border-radius: 50%;
+                margin-right: 23px;
+
+                &__image{
+                    position: relative;
+                    top: -15px;
+                    left: -15px;
+                    width: 56px;
+                    height: 56px;
+                    object-fit: contain;
+                }
+            }
+
+            .tasks-info{
+                
+                &__title{
+                    color: $lightCoral;
+                    margin-bottom: 16px;
+                }
+
+                &__text{
+                    color: $white;
+                    width: 445px;
+                }
+            }
+        }
+
+    }
+}
+
+
 
 
