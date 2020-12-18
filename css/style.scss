@@ -8,9 +8,18 @@
     justify-content: $jc;
     flex-direction: $fd;
 }
+
+@mixin background($url, $size, $repeat, $position){
+    background: $url;
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $position;
+}
+
 %transition{
     transition: all ease .5s;
 }
+// *********************************************************************************
 
 
 body{
@@ -71,8 +80,36 @@ body{
     }
 }
 
+.heading1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+    color: #002529;
+    & .coral{
+        color: $lightCoral;
+    }
+}
+
+.body1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #002529;
+}
+
+.body2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: #002529;
+}
+// *********************************************************************************
+
 .hero{
-    background-color: $policeBlue;
+    background-color:  $midnightGreen;
 }
 
 .header{
@@ -94,10 +131,45 @@ body{
             line-height: 28px;
             color: $white;
             padding: 0 20px;
+            @extend %transition;
+            &:hover{
+                color: $lightCoral;
+            }
         }
     }
     
 }
+// **********************************************************************
 
+.header__inner{
+    @include background(url(../images/hero1.svg), 100px 200px, no-repeat, top left)
+    
+}
+.content{
+    @include flex(flex-end, space-between, auto);
+    @include background(url(../images/hero2-3.png), 358px 100px, no-repeat, bottom right);
+    padding-bottom: 250px;
+    &__title{
+        max-width: 605px;
+    }
+    &__text{
+        max-width: 445px;
+        color: $white;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: #79C8C7;
+            @extend %transition;    
+        }
+        &:hover::before{
+            background: $lightCoral;
+        }
+    }
+}
 
 
