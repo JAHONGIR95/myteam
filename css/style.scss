@@ -130,6 +130,10 @@ body{
     line-height: 25px;
     color: #002529;
 }
+
+.light-blue{
+    color: $raptureBlue;
+}
 // *********************************************************************************
 
 .hero{
@@ -236,7 +240,7 @@ body{
     .management-right{
 
         &__tasks{
-            @include flex(center, auto, row)
+            @include flex(center, auto, row);
             margin-bottom: 32px;
 
             .tasks-image{
@@ -271,6 +275,73 @@ body{
         }
 
     }
+}
+// *************************************************
+
+.stories{
+    background-color: $jungleGreen;
+    background-image: url(../images/story-bg.svg), url(../images/story-bg2.svg);
+    background-repeat: no-repeat;
+    background-size: 147px 100px, 200px 100px;
+    background-position: top left, bottom right;
+
+    &__inner{
+        padding-top: 140px;
+        padding-bottom: 150px;
+
+        .stories-title{
+            text-align: center;
+            max-width: 932px;
+            color: $white;
+            margin-bottom: 92px;
+        }
+
+        .stories-block{
+            @include flex(flex-start, space-between, auto);
+            
+            .stories-col{
+                @include flex(center, center, column);
+                width: 31%;
+
+                &__text{
+                    text-align: center;
+                    color: $white;
+                    margin-bottom: 24px;
+                }
+
+                &__author{
+                    color: $raptureBlue;
+                    margin-bottom: 2px;
+                    @extend %transition;
+
+                    &:hover{
+                        opacity: .6;
+                    }
+                }
+
+                &__position{
+                    color: $white;
+                    font-weight: 300;
+                    font-size: 13px;
+                    margin-bottom: 32px;
+                }
+
+                &__image{
+                    border-radius: 50%;
+                    width: 62px;
+                    height: 62px;
+                    @extend %transition;
+
+                    &:hover{
+                        opacity: .7;
+                    }
+                }
+
+
+
+            }
+        }
+    }    
 }
 
 
