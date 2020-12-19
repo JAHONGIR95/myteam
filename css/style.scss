@@ -368,7 +368,7 @@ body{
 
     }
 }
-// *************************************************
+// *******************************************************************************
 
 .stories{
     background-color: $jungleGreen;
@@ -381,19 +381,44 @@ body{
         padding-top: 140px;
         padding-bottom: 150px;
 
+        @media only screen and (max-width: 768px){
+            padding-bottom: 110px;
+        }
+
         .stories-title{
             text-align: center;
             max-width: 932px;
             color: $white;
             margin-bottom: 92px;
+            // text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media only screen and (max-width: 768px){
+                max-width: 573px;
+            }
+            
         }
 
         .stories-block{
             @include flex(flex-start, space-between, auto);
+
+            @media only screen and (max-width: 768px){
+                @include flex(center, center, column);
+
+            }
             
             .stories-col{
                 @include flex(center, center, column);
                 max-width: 31%;
+
+                @media only screen and (max-width: 768px){
+                    max-width: 573px;
+                    margin-bottom: 84px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
 
                 &__text{
                     text-align: center;
@@ -434,6 +459,10 @@ body{
                     font-weight: 300;
                     font-size: 13px;
                     margin-bottom: 32px;
+
+                    @media only screen and (max-width: 768px){
+                        margin-bottom: 16px;
+                    }
                 }
 
 
