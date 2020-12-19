@@ -34,6 +34,14 @@ body{
     box-sizing: border-box;
 }
 
+.container-small{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 950px;
+    box-sizing: border-box;
+}
+
 .button{
     border: 2px solid #012F34;
     box-sizing: border-box;
@@ -44,6 +52,7 @@ body{
     line-height: 28px;
     color: #012F34;
     padding: 10px 32px;
+    display: inline-block;
     @extend %transition;
     &:hover{
         background: #012F34;
@@ -133,6 +142,10 @@ body{
 
 .light-blue{
     color: $raptureBlue;
+}
+
+.coral{
+    color: $lightCoral;
 }
 // *********************************************************************************
 
@@ -336,13 +349,44 @@ body{
                         opacity: .7;
                     }
                 }
-
-
-
             }
         }
     }    
 }
+// **********************************************************************************************
+
+.start{
+    background-color: $lightCoral;
+    background-image: url(../images/start1.svg);
+    background-repeat: no-repeat;
+    background-size: 165px 120px;
+    background-position: bottom left;
+
+    &-inner{
+        @include flex(center, space-between, auto);
+        padding-top: 76px;
+        padding-bottom: 76px;
+    }
+}
+// ******************************FOOTER************************************************************
+
+footer{
+    background-color: $darkGreen;
+    padding: 48px 0;
+
+    .footer{
+        @include flex(flex-start, space-between, auto);
+        
+        &__left{
+            @include flex(flex-start, auto, auto);
+            
+            .footer-col{
+                @include flex(flex-start, auto, column)
+            }
+        }
+    }
+}
+
 
 
 
