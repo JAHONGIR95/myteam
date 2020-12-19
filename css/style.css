@@ -466,9 +466,21 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 768px) {
+  .management__inner .management-left {
+    left: -50px;
+  }
+}
+
 .management__inner .management-left .management-left__title {
   max-width: 445px;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  .management__inner .management-left .management-left__title {
+    margin-bottom: 64px;
+  }
 }
 
 .management__inner .management-left::before {
@@ -594,6 +606,24 @@ body {
   text-align: center;
   color: #ffffff;
   margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.stories__inner .stories-block .stories-col__text::before {
+  content: "";
+  position: absolute;
+  top: -35px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: url(../images/sign.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 67px;
+  height: 56px;
+  z-index: -1;
 }
 
 .stories__inner .stories-block .stories-col__author {

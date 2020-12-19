@@ -278,6 +278,7 @@ body{
 
     @media only screen and (max-width: 768px){
         background-position: top right;
+        // margin: 0 auto;
     }
 
     &__inner{
@@ -292,9 +293,17 @@ body{
         .management-left{
             position: relative;
 
+            @media only screen and (max-width: 768px){
+                left: -50px;
+            }
+
             .management-left__title{
                 max-width: 445px;
                 color: $white;
+
+                @media only screen and (max-width: 768px){
+                    margin-bottom: 64px;
+                }
 
             }
 
@@ -390,6 +399,24 @@ body{
                     text-align: center;
                     color: $white;
                     margin-bottom: 24px;
+                    position: relative;
+                    z-index: 2;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: -35px;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        background-image: url(../images/sign.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        width: 67px;
+                        height: 56px;
+                        z-index: -1;
+                    }
                 }
 
                 &__author{
