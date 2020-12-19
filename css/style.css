@@ -548,6 +548,25 @@ body {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .management__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 64px;
+  }
+}
+
 .management__inner .management-left {
   position: relative;
 }
@@ -555,6 +574,12 @@ body {
 @media only screen and (max-width: 768px) {
   .management__inner .management-left {
     left: -50px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .management__inner .management-left {
+    left: 0;
   }
 }
 
@@ -566,6 +591,14 @@ body {
 @media only screen and (max-width: 768px) {
   .management__inner .management-left .management-left__title {
     margin-bottom: 64px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .management__inner .management-left .management-left__title {
+    font-size: 32px;
+    line-height: 32px;
+    max-width: 240px;
   }
 }
 
@@ -590,6 +623,13 @@ body {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 576px) {
+  .management .management-right {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .management .management-right__tasks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -607,12 +647,44 @@ body {
   margin-bottom: 32px;
 }
 
+@media only screen and (max-width: 576px) {
+  .management .management-right__tasks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 48px;
+  }
+}
+
 .management .management-right__tasks .tasks-image {
   width: 56px;
   height: 56px;
   background: #2C6269;
   border-radius: 50%;
   margin-right: 23px;
+}
+
+@media only screen and (max-width: 576px) {
+  .management .management-right__tasks .tasks-image {
+    margin-bottom: 16px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .management .management-right__tasks .tasks-image {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .management .management-right__tasks .tasks-image__image {
@@ -630,9 +702,25 @@ body {
   margin-bottom: 16px;
 }
 
+@media only screen and (max-width: 576px) {
+  .management .management-right__tasks .tasks-info__title {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+}
+
 .management .management-right__tasks .tasks-info__text {
   color: #ffffff;
   max-width: 445px;
+}
+
+@media only screen and (max-width: 576px) {
+  .management .management-right__tasks .tasks-info__text {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 540px;
+    text-align: center;
+  }
 }
 
 .stories {
