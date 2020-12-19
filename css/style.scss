@@ -40,6 +40,7 @@ body{
     margin: 0 auto;
     max-width: 950px;
     box-sizing: border-box;
+    
 }
 
 @media only screen and (max-width: 768px){
@@ -49,6 +50,16 @@ body{
 
     .container-small{
         max-width: 605px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+
+    .container-small{
+        max-width: 420px;
     }
 }
 
@@ -173,9 +184,16 @@ body{
 .header{
     padding-top: 77px;
     padding-bottom: 130px;
+
     @media only screen and (max-width: 768px){
         padding-bottom: 120px;
     }
+
+    @media only screen and (max-width: 576px){
+        padding-top: 48px;
+        padding-bottom: 80px;
+    }
+
     @include flex(center, space-between, auto);
     .header-left{
         @include flex(center, center, auto);
@@ -184,6 +202,31 @@ body{
             height: 40px;
             object-fit: contain;
             margin-right: 60px;
+
+            & .logo:first-child{
+                display: block;
+
+                @media only screen and (max-width: 576px){
+                    &{
+                        display: none;
+                    }
+                }
+            }
+
+            & .logo:last-child{
+                display: none;
+
+                @media only screen and (max-width: 576px){
+                    &{
+                        display: block;
+                        width: 128px;
+                        height: 32px;
+                        object-fit: cover; 
+                    }
+                }
+            }
+
+            
         }
         &__header-links{
             font-style: normal;
@@ -193,13 +236,51 @@ body{
             color: $white;
             padding: 0 20px;
             @extend %transition;
+
+            @media only screen and (max-width: 576px){
+                &.hide{
+                    display: none;
+                }
+            }
+            
             &:hover{
                 color: $lightCoral;
             }
         }
     }
     
+    .header-right{
+        
+        @media only screen and (max-width: 576px){
+            &.hide{
+                display: none;
+            }
+        }
+    }   
 }
+
+.hamburger-menu{
+    display: none;
+
+    @media only screen and (max-width: 576px){
+        &{
+            display: block;
+
+            & .lines{
+                width: 20px;
+                height: 3px;
+                background-color: $white;
+                margin-bottom: 4px;
+                
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    
+}
+
 
 @media only screen and (max-width: 768px){
     .container{
@@ -226,6 +307,11 @@ body{
         background-size: 358px 100px;
         @include flex(center, center, column);
     }
+
+    @media only screen and (max-width: 768px){
+        padding-bottom: 197px;
+    }
+
     &__title{
         max-width: 605px;
 
@@ -237,6 +323,13 @@ body{
             color: $white;
             margin-bottom: 24px;
         }
+
+        @media only screen and (max-width: 576px){
+            font-size: 40px;
+            line-height: 40px;
+            max-width: 248px;
+            margin-bottom: 18px;
+        }
     }
     &__text{
         max-width: 445px;
@@ -247,6 +340,7 @@ body{
             text-align: center;
             font-size: 15px;
         }
+
         &::before{
             content: "";
             position: absolute;
@@ -515,14 +609,36 @@ footer{
 
     .footer{
         @include flex(flex-start, space-between, auto);
+
+        @media only screen and (max-width: 768px){
+            @include flex(auto, auto, column);
+        
+        }
         
         &__left{
-            @include flex(flex-start, auto, auto);
+            @include flex(flex-start, space-between, auto);
+
+            @media only screen and (max-width: 768px){
+                @include flex(auto, space-between, auto);
+                margin-bottom: 35px;
+                width: 100%;
+            }
             
             .footer-col{
                 @include flex(flex-start, auto, column);
+
+                @media only screen and (max-width: 768px){
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+                
                 &:first-child{
                     margin-right: 125px;
+
+                    @media only screen and (max-width: 768px){
+                        margin-right: 0;
+                    }
                 }
 
                 &__myteam{
@@ -531,6 +647,10 @@ footer{
                     object-fit: contain;
                     margin-bottom: 25px;
                     @extend %transition;
+
+                    @media only screen and (max-width: 768px){
+                        margin-bottom: 50px;
+                    }
                     
                     &:hover{
                         opacity: .6;
@@ -546,6 +666,11 @@ footer{
                         line-height: 28px;
                         color: $white;
                         @extend %transition;
+
+                        @media only screen and (max-width: 768px){
+                            font-size: 15px;
+                            line-height: 25px;
+                        }
 
                         &:hover{
                             color: $lightCoral;
@@ -583,12 +708,29 @@ footer{
 
         &__right{
             @include flex(flex-end, space-between, column);
+
+            @media only screen and (max-width: 768px){
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                
+            }
             
             .media{
                 margin-bottom: 50px;
+
+                @media only screen and (max-width: 768px){
+                    margin-bottom: 0;
+                }
                 
                 &__social-media{
                     margin-left: 16px;
+
+                    @media only screen and (max-width: 768px){
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                    }
 
                     svg{
                         fill: $white;
