@@ -108,6 +108,15 @@ body {
           box-sizing: border-box;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .container-small {
+    max-width: 605px;
+  }
+}
+
 .button {
   border: 2px solid #012F34;
   -webkit-box-sizing: border-box;
@@ -190,6 +199,13 @@ body {
   color: #002529;
 }
 
+@media only screen and (max-width: 768px) {
+  .heading2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
 .heading3 {
   font-style: normal;
   font-weight: bold;
@@ -244,6 +260,12 @@ body {
           flex-direction: auto;
 }
 
+@media only screen and (max-width: 768px) {
+  .header {
+    padding-bottom: 120px;
+  }
+}
+
 .header .header-left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -281,11 +303,23 @@ body {
   color: #F67E7E;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
 .header__inner {
   background: url(../images/hero1.svg);
   background-size: 100px 200px;
   background-repeat: no-repeat;
   background-position: top left;
+}
+
+@media only screen and (max-width: 768px) {
+  .header__inner {
+    background-image: none;
+  }
 }
 
 .content {
@@ -309,14 +343,52 @@ body {
   padding-bottom: 250px;
 }
 
+@media only screen and (max-width: 768px) {
+  .content {
+    background-position: bottom center;
+    background-size: 358px 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .content__title {
   max-width: 605px;
+}
+
+@media only screen and (max-width: 768px) {
+  .content__title {
+    text-align: center;
+    font-size: 64px;
+    line-height: 56px;
+    max-width: 350px;
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
 }
 
 .content__text {
   max-width: 445px;
   color: #ffffff;
   position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .content__text {
+    text-align: center;
+    font-size: 15px;
+  }
 }
 
 .content__text::before {
@@ -329,8 +401,15 @@ body {
   background: #79C8C7;
 }
 
+@media only screen and (max-width: 768px) {
+  .content__text::before {
+    display: none;
+  }
+}
+
 .content__text:hover::before {
   background: #F67E7E;
+  cursor: pointer;
 }
 
 .management {
@@ -339,6 +418,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100px 244px;
   background-position: bottom right;
+}
+
+@media only screen and (max-width: 768px) {
+  .management {
+    background-position: top right;
+  }
 }
 
 .management__inner {
@@ -359,12 +444,30 @@ body {
   padding-bottom: 140px;
 }
 
+@media only screen and (max-width: 768px) {
+  .management__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .management__inner .management-left {
   position: relative;
 }
 
 .management__inner .management-left .management-left__title {
-  width: 445px;
+  max-width: 445px;
   color: #ffffff;
 }
 
@@ -378,8 +481,15 @@ body {
   background-color: #F67E7E;
 }
 
+@media only screen and (max-width: 768px) {
+  .management__inner .management-left::before {
+    top: -30px;
+  }
+}
+
 .management__inner .management-left:hover::before {
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .management .management-right__tasks {
@@ -424,7 +534,7 @@ body {
 
 .management .management-right__tasks .tasks-info__text {
   color: #ffffff;
-  width: 445px;
+  max-width: 445px;
 }
 
 .stories {
@@ -477,7 +587,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 31%;
+  max-width: 31%;
 }
 
 .stories__inner .stories-block .stories-col__text {

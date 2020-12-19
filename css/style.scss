@@ -42,6 +42,16 @@ body{
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+
+    .container-small{
+        max-width: 605px;
+    }
+}
+
 .button{
     border: 2px solid #012F34;
     box-sizing: border-box;
@@ -116,6 +126,13 @@ body{
     color: #002529;
 }
 
+@media only screen and (max-width: 768px){
+    .heading2{
+        font-size: 32px;
+        line-height: 32px;  
+    }
+}
+
 .heading3{
     font-style: normal;
     font-weight: bold;
@@ -156,6 +173,9 @@ body{
 .header{
     padding-top: 77px;
     padding-bottom: 130px;
+    @media only screen and (max-width: 768px){
+        padding-bottom: 120px;
+    }
     @include flex(center, space-between, auto);
     .header-left{
         @include flex(center, center, auto);
@@ -180,23 +200,53 @@ body{
     }
     
 }
+
+@media only screen and (max-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
 // **********************************************************************
 
 .header__inner{
-    @include background(url(../images/hero1.svg), 100px 200px, no-repeat, top left)
+    @include background(url(../images/hero1.svg), 100px 200px, no-repeat, top left);
+    
+    @media only screen and (max-width: 768px){
+        background-image: none;
+    }
     
 }
 .content{
     @include flex(flex-end, space-between, auto);
     @include background(url(../images/hero2.svg), 358px 100px, no-repeat, bottom right);
     padding-bottom: 250px;
+
+    @media only screen and (max-width: 768px){
+        background-position: bottom center;
+        background-size: 358px 100px;
+        @include flex(center, center, column);
+    }
     &__title{
         max-width: 605px;
+
+        @media only screen and (max-width: 768px){
+            text-align: center;
+            font-size: 64px;
+            line-height: 56px;
+            max-width: 350px;
+            color: $white;
+            margin-bottom: 24px;
+        }
     }
     &__text{
         max-width: 445px;
         color: $white;
         position: relative;
+
+        @media only screen and (max-width: 768px){
+            text-align: center;
+            font-size: 15px;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -205,10 +255,15 @@ body{
             width: 50px;
             height: 4px;
             background: #79C8C7;
-            @extend %transition;    
+            @extend %transition;  
+            
+            @media only screen and (max-width: 768px){
+                display: none;
+            }
         }
         &:hover::before{
             background: $lightCoral;
+            cursor: pointer;
         }
     }
 }
@@ -221,16 +276,26 @@ body{
     background-size: 100px 244px;
     background-position: bottom right;
 
+    @media only screen and (max-width: 768px){
+        background-position: top right;
+    }
+
     &__inner{
         @include flex(flex-start, space-between, auto);
         padding-top: 190px;
         padding-bottom: 140px;
 
+        @media only screen and (max-width: 768px){
+            @include flex(center, flex-start, column);
+        }
+
         .management-left{
             position: relative;
+
             .management-left__title{
-                width: 445px;
+                max-width: 445px;
                 color: $white;
+
             }
 
             &::before{
@@ -242,10 +307,15 @@ body{
                 height: 4px;
                 background-color: $lightCoral;
                 @extend %transition;
+
+                @media only screen and (max-width: 768px){
+                    top: -30px;
+                }
             }
 
             &:hover::before{
                 background-color: $white;
+                cursor: pointer;
             }
         }
     }
@@ -282,7 +352,7 @@ body{
 
                 &__text{
                     color: $white;
-                    width: 445px;
+                    max-width: 445px;
                 }
             }
         }
@@ -314,7 +384,7 @@ body{
             
             .stories-col{
                 @include flex(center, center, column);
-                width: 31%;
+                max-width: 31%;
 
                 &__text{
                     text-align: center;
