@@ -663,7 +663,7 @@ body{
     background-size: 165px 120px;
     background-position: bottom left;
 
-    @media only screen and (max-width: 576px){
+    @media only screen and (max-width: 768px){
         background-image: none;
         background-image: url(../images/start2.svg);
         background-size: 200px 122px;
@@ -673,22 +673,19 @@ body{
         @include flex(center, space-between, auto);
         padding-top: 76px;
         padding-bottom: 76px;
+        flex-direction: column;
 
         @media only screen and (max-width: 576px){
-            flex-direction: column;
-            max-width: 327px;
             padding-top: 83px;
             padding-bottom: 83px;
-
-            &__title{
-                font-size: 32px;
-                line-height: 32px;
-                margin-bottom: 24px;
-                text-align: center;
-            }
         }
 
-
+        &__title{
+            font-size: 32px;
+            line-height: 32px;
+            margin-bottom: 24px;
+        }
+    }
 }
 // ******************************FOOTER************************************************************
 
@@ -712,6 +709,13 @@ footer{
                 margin-bottom: 35px;
                 width: 100%;
             }
+
+            @media only screen and (max-width: 576px){
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 40px;
+            }
             
             .footer-col{
                 @include flex(flex-start, auto, column);
@@ -722,11 +726,24 @@ footer{
                     }
                 }
                 
+                @media only screen and (max-width: 576px){
+                    &:last-child{
+                        text-align: center;
+                        @include flex(center, center, column);
+
+                    }
+                }
+
                 &:first-child{
                     margin-right: 125px;
 
                     @media only screen and (max-width: 768px){
                         margin-right: 0;
+                    }
+
+                    @media only screen and (max-width: 576px){
+                        margin-bottom: 24px;
+                        // text-align: center;
                     }
                 }
 
@@ -740,6 +757,12 @@ footer{
                     @media only screen and (max-width: 768px){
                         margin-bottom: 50px;
                     }
+
+                    @media only screen and (max-width: 576px){
+                        margin-right: auto;
+                        margin-left: auto;
+                        margin-bottom: 24px;
+                    }
                     
                     &:hover{
                         opacity: .6;
@@ -747,6 +770,11 @@ footer{
                 }
 
                 .footer-menu{
+
+                    @media only screen and (max-width: 576px){
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
 
                     &__link{
                         font-style: normal;
@@ -778,6 +806,10 @@ footer{
                     opacity: 0.6;
                     font-weight: 400;
 
+                    @media only screen and (max-width: 576px){
+                        // margin-bottom: 40px;
+                    }
+
                     .phone{
                         color: $white;
                         mix-blend-mode: normal;
@@ -802,7 +834,13 @@ footer{
                 flex-direction: row;
                 justify-content: space-between;
                 width: 100%;
-                
+            }
+
+            @media only screen and (max-width: 576px){
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
             }
             
             .media{
@@ -811,6 +849,11 @@ footer{
                 @media only screen and (max-width: 768px){
                     margin-bottom: 0;
                 }
+
+                @media only screen and (max-width: 576px){
+                    margin-bottom: 18px;
+                }
+
                 
                 &__social-media{
                     margin-left: 16px;
@@ -842,4 +885,8 @@ footer{
         }
     }
 }
-}
+
+
+
+
+
