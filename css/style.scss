@@ -673,17 +673,21 @@ body{
         @include flex(center, space-between, auto);
         padding-top: 76px;
         padding-bottom: 76px;
-        flex-direction: column;
+        
 
         @media only screen and (max-width: 576px){
+            // @include flex(center, space-between, column);
             padding-top: 83px;
             padding-bottom: 83px;
+            flex-direction: column;
         }
 
         &__title{
-            font-size: 32px;
-            line-height: 32px;
-            margin-bottom: 24px;
+            @media only screen and (max-width: 576px){
+                font-size: 32px;
+                line-height: 32px;
+                margin-bottom: 24px;
+            }
         }
     }
 }

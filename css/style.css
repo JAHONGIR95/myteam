@@ -945,21 +945,25 @@ body {
           flex-direction: auto;
   padding-top: 76px;
   padding-bottom: 76px;
-  -ms-flex-direction: column;
-      flex-direction: column;
 }
 
 @media only screen and (max-width: 576px) {
   .start-inner {
     padding-top: 83px;
     padding-bottom: 83px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-.start-inner__title {
-  font-size: 32px;
-  line-height: 32px;
-  margin-bottom: 24px;
+@media only screen and (max-width: 576px) {
+  .start-inner__title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
 }
 
 footer {
