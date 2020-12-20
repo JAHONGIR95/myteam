@@ -664,14 +664,31 @@ body{
     background-position: bottom left;
 
     @media only screen and (max-width: 576px){
-        background-size: ;
+        background-image: none;
+        background-image: url(../images/start2.svg);
+        background-size: 200px 122px;
     }
 
     &-inner{
         @include flex(center, space-between, auto);
         padding-top: 76px;
         padding-bottom: 76px;
-    }
+
+        @media only screen and (max-width: 576px){
+            flex-direction: column;
+            max-width: 327px;
+            padding-top: 83px;
+            padding-bottom: 83px;
+
+            &__title{
+                font-size: 32px;
+                line-height: 32px;
+                margin-bottom: 24px;
+                text-align: center;
+            }
+        }
+
+
 }
 // ******************************FOOTER************************************************************
 
@@ -825,8 +842,4 @@ footer{
         }
     }
 }
-
-
-
-
-
+}
