@@ -31,6 +31,11 @@
             height: 40px;
             object-fit: contain;
             margin-right: 60px;
+            @extend %transition;
+
+            &:hover{
+                opacity: .6;
+            }
 
             & .logo:first-child{
                 display: block;

@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   text-decoration: none;
 }
 
-.button, .header .header-left__header-links, .content__text::before, .management__inner .management-left::before, .stories__inner .stories-block .stories-col__author, .stories__inner .stories-block .stories-col .img-wrapper .stories-col__image, footer .footer__left .footer-col__myteam, footer .footer__left .footer-col .footer-menu__link, footer .footer__left .footer-col__info .phone, footer .footer__right .media__social-media svg {
+.button, .header .header-left__myteam, .header .header-left__header-links, .content__text::before, .management__inner .management-left::before, .stories__inner .stories-block .stories-col__author, .stories__inner .stories-block .stories-col .img-wrapper .stories-col__image, footer .footer__left .footer-col__myteam, footer .footer__left .footer-col .footer-menu__link, footer .footer__left .footer-col__info .phone, footer .footer__right .media__social-media svg {
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
 }
@@ -304,6 +304,10 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
   margin-right: 60px;
+}
+
+.header .header-left__myteam:hover {
+  opacity: .6;
 }
 
 .header .header-left__myteam .logo:first-child {

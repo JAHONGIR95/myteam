@@ -2,3 +2,191 @@
 @import '../../css/normalize';
 @import '../../css/variables';
 @import '../../css/generalization';
+
+.hero{
+    background-color:  $midnightGreen;
+}
+// ****************************HEADER******************************
+.header{
+    padding-top: 77px;
+    padding-bottom: 120px;
+
+    @media only screen and (max-width: 768px){
+        padding-bottom: 120px;
+    }
+
+    @media only screen and (max-width: 576px){
+        padding-top: 48px;
+        padding-bottom: 80px;
+    }
+
+    @include flex(center, space-between, auto);
+    .header-left{
+        @include flex(center, center, auto);
+        &__myteam{
+            width: 159.95px;
+            height: 40px;
+            object-fit: contain;
+            margin-right: 60px;
+            @extend %transition;
+
+            &:hover{
+                opacity: .6;
+            }
+
+            & .logo:first-child{
+                display: block;
+
+                @media only screen and (max-width: 576px){
+                    &{
+                        display: none;
+                    }
+                }
+            }
+
+            & .logo:last-child{
+                display: none;
+
+                @media only screen and (max-width: 576px){
+                    &{
+                        display: block;
+                        width: 128px;
+                        height: 32px;
+                        object-fit: cover; 
+                    }
+                }
+            }
+
+            
+        }
+        &__header-links{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            color: $white;
+            padding: 0 20px;
+            @extend %transition;
+
+            @media only screen and (max-width: 576px){
+                &.hide{
+                    display: none;
+                }
+            }
+            
+            &:hover{
+                color: $lightCoral;
+            }
+        }
+    }
+    
+    .header-right{
+        
+        @media only screen and (max-width: 576px){
+            &.hide{
+                display: none;
+            }
+        }
+    }   
+}
+// **************************hamburger menu********************************
+.hamburger-menu{
+    display: none;
+
+    @media only screen and (max-width: 576px){
+        &{
+            display: block;
+
+            & .lines{
+                width: 20px;
+                height: 3px;
+                background-color: $white;
+                margin-bottom: 4px;
+                
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+// ********************* hero **************************
+
+.header__inner{
+    @include background(url(../images/about-hero.svg), 100px 200px, no-repeat, bottom right);
+    
+    @media only screen and (max-width: 768px){
+        background-image: none;
+    }
+    
+}
+//*********************** hero content ***************************
+
+.content{
+    @include flex(flex-start, space-between, auto);
+    padding-bottom: 120px;
+
+    @media only screen and (max-width: 768px){
+        background-position: bottom center;
+        background-size: 358px 100px;
+        @include flex(center, center, column);
+    }
+
+    @media only screen and (max-width: 768px){
+        padding-bottom: 197px;
+    }
+
+    &__title{
+        color: $white;
+        position: relative;
+        top: -40px;
+        line-height: 100px;
+
+        @media only screen and (max-width: 768px){
+            text-align: center;
+            font-size: 64px;
+            line-height: 56px;
+            max-width: 350px;
+            color: $white;
+            margin-bottom: 24px;
+        }
+
+        @media only screen and (max-width: 576px){
+            font-size: 40px;
+            line-height: 40px;
+            max-width: 248px;
+            margin-bottom: 18px;
+        }
+    }
+    &__text{
+        max-width: 730px;
+        color: $white;
+        position: relative;
+
+        @media only screen and (max-width: 768px){
+            text-align: center;
+            font-size: 15px;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: #79C8C7;
+            @extend %transition;  
+            
+            @media only screen and (max-width: 768px){
+                display: none;
+            }
+        }
+        &:hover::before{
+            background: $lightCoral;
+            cursor: pointer;
+        }
+    }
+}
+// ***************************************************************************************************
+
