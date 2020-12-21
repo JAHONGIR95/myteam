@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   text-decoration: none;
 }
 
-.button, .header .header-left__myteam, .header .header-left__header-links, .content__text::before {
+.button, .header .header-left__myteam, .header .header-left__header-links, .content__text::before, .clients-inner .clients-logo__image {
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
 }
@@ -596,5 +596,39 @@ body {
   background-position: contain;
   width: 16px;
   height: 16px;
+}
+
+.clients {
+  background-color: #012F34;
+  background-image: url(../images/clients-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: top left;
+}
+
+.clients-inner {
+  padding-top: 140px;
+  padding-bottom: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.clients-inner__title {
+  color: #ffffff;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.clients-inner .clients-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.clients-inner .clients-logo__image:hover {
+  opacity: .6;
 }
 /*# sourceMappingURL=style.css.map */

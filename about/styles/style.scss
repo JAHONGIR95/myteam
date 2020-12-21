@@ -272,11 +272,45 @@
                         width: 16px;
                         height: 16px;
                     }
-
-                    
                 }
-               
             }
         }
     }
 }
+// ******************************* clients *************************************
+
+.clients{
+    background-color: $stateGreen;
+    background-image: url(../images/clients-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: top left;
+
+    &-inner{
+        padding-top: 140px;
+        padding-bottom: 150px;
+        margin-right: auto;
+        margin-left: auto;
+        
+        &__title{
+            color: $white;
+            margin-bottom: 70px;
+            text-align: center;
+        }
+
+        .clients-logo{
+            display: flex;
+            justify-content: space-between;
+
+            &__image{
+                @extend %transition;
+
+                &:hover{
+                    opacity: .6;
+                }
+            }
+        }
+    }
+}
+// ******************************* get ready ************************************
+
