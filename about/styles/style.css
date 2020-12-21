@@ -1,0 +1,249 @@
+@font-face {
+  font-family: 'Livvic';
+  src: url("../fonts/Livvic-Regular.eot");
+  src: url("../fonts/Livvic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Livvic-Regular.woff") format("woff"), url("../fonts/Livvic-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url("../fonts/Livvic-Bold.eot");
+  src: url("../fonts/Livvic-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Livvic-Bold.woff") format("woff"), url("../fonts/Livvic-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url("../fonts/Livvic-SemiBold.eot");
+  src: url("../fonts/Livvic-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Livvic-SemiBold.woff") format("woff"), url("../fonts/Livvic-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url("../fonts/Livvic-Black.eot");
+  src: url("../fonts/Livvic-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Livvic-Black.woff") format("woff"), url("../fonts/Livvic-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url("../fonts/Livvic-Medium.eot");
+  src: url("../fonts/Livvic-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Livvic-Medium.woff") format("woff"), url("../fonts/Livvic-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url("../fonts/Livvic-Light.eot");
+  src: url("../fonts/Livvic-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Livvic-Light.woff") format("woff"), url("../fonts/Livvic-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url("../fonts/Livvic-Light.eot");
+  src: url("../fonts/Livvic-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Livvic-Light.woff") format("woff"), url("../fonts/Livvic-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url("../fonts/Livvic-Italic.eot");
+  src: url("../fonts/Livvic-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Livvic-Italic.woff") format("woff"), url("../fonts/Livvic-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.button {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+body {
+  font-family: "Livvic";
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1140px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-small {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 950px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .container-small {
+    max-width: 605px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .container-small {
+    max-width: 420px;
+  }
+}
+
+.button {
+  border: 2px solid #012F34;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #012F34;
+  padding: 10px 32px;
+  display: inline-block;
+}
+
+.button:hover {
+  background: #012F34;
+  color: #FFFFFF;
+}
+
+.button:active {
+  mix-blend-mode: normal;
+  opacity: 0.25;
+}
+
+.button--primary {
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.button--primary:hover {
+  background: #FFFFFF;
+  color: #002529;
+}
+
+.button--primary:active {
+  mix-blend-mode: normal;
+  opacity: 0.25;
+}
+
+.button--secondary {
+  background: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  color: #002529;
+}
+
+.button--secondary:hover {
+  background: #79C8C7;
+  color: #002529;
+}
+
+.button--secondary:active {
+  opacity: 0.25;
+}
+
+.heading1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 100px;
+  color: #002529;
+}
+
+.heading1 .coral {
+  color: #F67E7E;
+}
+
+.heading1small {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 56px;
+  color: #002529;
+}
+
+.heading2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  color: #002529;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.heading3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color: #002529;
+}
+
+.body1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #002529;
+}
+
+.body2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: #002529;
+}
+
+.light-blue {
+  color: #79C8C7;
+}
+
+.coral {
+  color: #F67E7E;
+}
+/*# sourceMappingURL=style.css.map */
