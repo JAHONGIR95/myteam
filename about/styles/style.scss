@@ -190,3 +190,93 @@
 }
 // ***************************************************************************************************
 
+.team{
+    background-color: $jungleGreen;
+    background-image: url(../images/team1.svg), url(../images/team2.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 200px, 147px 100px;
+    background-position: top left, bottom right;
+
+    &-inner{
+
+        &__title{
+            text-align: center;
+            color: $white;
+            padding-top: 140px;
+            padding-bottom: 64px;
+        }
+
+        .cards-section{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-bottom: 94px;
+
+            .card{
+                width: 350px;
+                height: 253px;
+                background-color: $stateGreen;
+                margin-bottom: 76px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 32px;
+                box-sizing: border-box;
+                
+                .person{
+                    overflow: hidden;
+                    margin-bottom: 16px;
+                    border-radius: 50%;
+                    width: 96px;
+                    height: 96px;
+
+                    &__image{
+                        width: 100%;
+                        height: 100%;
+                        transform: scale(1);
+                        transition: all ease .5s;
+
+                        &:hover{
+                            transform: scale(1.4);
+                        }
+                    }
+                }
+
+                &__position{
+                    color: $white;
+                    font-weight: 400;
+                }
+
+                &__button{
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    background: #F67E7E;
+                    position: relative;
+                    top: 25px;
+                    cursor: pointer;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        margin: auto;
+                        background-image: url(../images/plass.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: contain;
+                        width: 16px;
+                        height: 16px;
+                    }
+
+                    
+                }
+               
+            }
+        }
+    }
+}

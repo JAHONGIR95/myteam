@@ -494,4 +494,107 @@ body {
   background: #F67E7E;
   cursor: pointer;
 }
+
+.team {
+  background-color: #004047;
+  background-image: url(../images/team1.svg), url(../images/team2.svg);
+  background-repeat: no-repeat;
+  background-size: 100px 200px, 147px 100px;
+  background-position: top left, bottom right;
+}
+
+.team-inner__title {
+  text-align: center;
+  color: #ffffff;
+  padding-top: 140px;
+  padding-bottom: 64px;
+}
+
+.team-inner .cards-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 94px;
+}
+
+.team-inner .cards-section .card {
+  width: 350px;
+  height: 253px;
+  background-color: #012F34;
+  margin-bottom: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.team-inner .cards-section .card .person {
+  overflow: hidden;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+}
+
+.team-inner .cards-section .card .person__image {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.team-inner .cards-section .card .person__image:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.team-inner .cards-section .card__position {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.team-inner .cards-section .card__button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #F67E7E;
+  position: relative;
+  top: 25px;
+  cursor: pointer;
+}
+
+.team-inner .cards-section .card__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-image: url(../images/plass.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: contain;
+  width: 16px;
+  height: 16px;
+}
 /*# sourceMappingURL=style.css.map */
