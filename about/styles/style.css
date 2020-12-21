@@ -631,4 +631,57 @@ body {
 .clients-inner .clients-logo__image:hover {
   opacity: .6;
 }
+
+.start {
+  background-color: #F67E7E;
+  background-image: url(../images/start1.svg);
+  background-repeat: no-repeat;
+  background-size: 165px 120px;
+  background-position: bottom left;
+}
+
+@media only screen and (max-width: 768px) {
+  .start {
+    background-image: none;
+    background-image: url(../images/start2.svg);
+    background-size: 200px 122px;
+  }
+}
+
+.start-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: auto;
+          flex-direction: auto;
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+
+@media only screen and (max-width: 576px) {
+  .start-inner {
+    padding-top: 83px;
+    padding-bottom: 83px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .start-inner__title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
