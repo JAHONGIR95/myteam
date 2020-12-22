@@ -679,6 +679,19 @@ body {
 @media only screen and (max-width: 768px) {
   .clients {
     background-image: none;
+    background-image: url(../images/clients768.svg);
+    background-repeat: no-repeat;
+    background-size: 200px 100px;
+    background-position: top left;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .clients {
+    background-image: none;
+    background-image: url(../images/clients3.svg);
+    background-size: 100px 100px;
+    background-position: top left;
   }
 }
 
@@ -687,6 +700,12 @@ body {
   padding-bottom: 150px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media only screen and (max-width: 576px) {
+  .clients-inner {
+    padding-bottom: 50px;
+  }
 }
 
 .clients-inner__title {
@@ -711,6 +730,18 @@ body {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 576px) {
+  .clients-inner .clients-logo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .clients-inner .clients-logo__image .img {
     width: 110px;
@@ -718,6 +749,14 @@ body {
     display: block;
     -o-object-fit: contain;
        object-fit: contain;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-width: 576px) {
+  .clients-inner .clients-logo__image .img {
+    margin-bottom: 56px;
+    width: auto;
+    height: auto;
   }
 }
 

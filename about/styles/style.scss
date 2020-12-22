@@ -269,6 +269,7 @@
                 @media only screen and (max-width: 576px){
                     max-width: 327px;
                     margin-bottom: 52px;
+                    // width: 100%;
                 }
                 
                 .person{
@@ -335,6 +336,17 @@
 
     @media only screen and (max-width: 768px){
         background-image: none;
+        background-image: url(../images/clients768.svg);
+        background-repeat: no-repeat;
+        background-size: 200px 100px;
+        background-position: top left;
+    }
+
+    @media only screen and (max-width: 576px){
+        background-image: none;
+        background-image: url(../images/clients3.svg);
+        background-size: 100px 100px;
+        background-position: top left;
     }
 
     &-inner{
@@ -342,6 +354,10 @@
         padding-bottom: 150px;
         margin-right: auto;
         margin-left: auto;
+
+        @media only screen and (max-width: 576px){
+            padding-bottom: 50px;
+        }
         
         &__title{
             color: $white;
@@ -358,6 +374,11 @@
             display: flex;
             justify-content: space-between;
 
+            @media only screen and (max-width: 576px){
+                flex-direction: column;
+                align-items: center;
+            }
+
             &__image{
                 @extend %transition;
 
@@ -367,6 +388,12 @@
                         height: auto;
                         display: block;
                         object-fit: contain;
+
+                        @media only screen and (max-width: 576px){
+                            margin-bottom: 56px;
+                            width: auto;
+                            height: auto;
+                        }
                     }
                 }
 
