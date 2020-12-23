@@ -1,7 +1,9 @@
 .hamburger-menu{
 
+    transition: all ease .9s;
+
     position: relative;
-    z-index: 3;
+    z-index: 1000;
 
     .lines{
 
@@ -17,6 +19,8 @@
     }
 
     &.clicked{
+
+        transform: translateX(-170px);
 
         .lines{
             
@@ -52,4 +56,8 @@
     height: 100%;
     background: rgba(26, 16, 16, 0.5);
 
+}
+
+body.opened{
+    overflow: hidden;
 }

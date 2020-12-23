@@ -248,8 +248,10 @@ body {
 }
 
 .hamburger-menu {
+  -webkit-transition: all ease .9s;
+  transition: all ease .9s;
   position: relative;
-  z-index: 3;
+  z-index: 1000;
 }
 
 .hamburger-menu .lines:first-child {
@@ -264,6 +266,11 @@ body {
           transform-origin: left;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
+}
+
+.hamburger-menu.clicked {
+  -webkit-transform: translateX(-170px);
+          transform: translateX(-170px);
 }
 
 .hamburger-menu.clicked .lines:nth-child(2) {
@@ -295,6 +302,10 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(26, 16, 16, 0.5);
+}
+
+body.opened {
+  overflow: hidden;
 }
 
 .sidebar {
@@ -976,7 +987,7 @@ body {
   color: #ffffff;
   margin-bottom: 24px;
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 
 @media only screen and (max-width: 576px) {
@@ -1403,5 +1414,15 @@ footer .footer__right .media__guarantee {
   mix-blend-mode: normal;
   opacity: 0.6;
   font-weight: 400;
+}
+
+::-moz-selection {
+  background-color: rgba(47, 155, 47, 0.411);
+  color: #ffffff;
+}
+
+::selection {
+  background-color: rgba(47, 155, 47, 0.411);
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -486,7 +486,7 @@
                     color: $white;
                     margin-bottom: 24px;
                     position: relative;
-                    z-index: 2;
+                    z-index: 0;
 
                     @media only screen and (max-width: 576px){
                         margin-bottom: 16px;
@@ -791,6 +791,10 @@ footer{
     }
 }
 
+::selection{
+    background-color: rgba(47, 155, 47, 0.411);
+    color: $white;
+}
 
 
 
