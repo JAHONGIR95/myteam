@@ -1,16 +1,22 @@
 .hamburger-menu{
 
-    &:first-child{
-        transform-origin: right;
-        transition: all ease .5s;
+    position: relative;
+    z-index: 3;
+
+    .lines{
+
+        &:first-child{
+            transform-origin: left;
+            transition: all ease .5s;
+        }
+    
+        &:last-child{
+            transform-origin: left;
+            transition: all ease .5s;
+        }
     }
 
-    &:last-child{
-        transform-origin: left;
-        transition: all ease .5s;
-    }
-
-    .hamburger-menu.clicked{
+    &.clicked{
 
         .lines{
             
@@ -21,7 +27,10 @@
             &:first-child{
                 transform: rotate(45deg);
             }
-            
+
+            &:last-child{
+                transform: rotate(-45deg);
+            } 
         }
 
         
