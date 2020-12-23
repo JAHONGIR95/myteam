@@ -488,9 +488,19 @@ body {
   font-size: 18px;
 }
 
+.contact__inner .contact-right {
+  width: 540px;
+}
+
 @media only screen and (max-width: 576px) {
   .contact__inner .contact-right {
-    max-width: 325px;
+    width: 325px;
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  .contact__inner .contact-right {
+    width: 250px;
   }
 }
 
@@ -508,7 +518,7 @@ body {
 }
 
 .contact__inner .contact-right form input {
-  width: 540px;
+  width: 100%;
   display: block;
   outline: none;
   border: none;
@@ -582,7 +592,7 @@ body {
 }
 
 .contact__inner .contact-right form textarea {
-  width: 540px;
+  width: 100%;
   padding: 14px 24px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

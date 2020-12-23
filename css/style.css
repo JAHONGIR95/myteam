@@ -247,6 +247,29 @@ body {
   color: #F67E7E;
 }
 
+.hamburger-menu:first-child {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.hamburger-menu:last-child {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.hamburger-menu .hamburger-menu.clicked .lines:nth-child(2) {
+  visibility: hidden;
+}
+
+.hamburger-menu .hamburger-menu.clicked .lines:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .hero {
   background-color: #014E56;
 }

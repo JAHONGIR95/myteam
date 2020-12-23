@@ -1,0 +1,29 @@
+.hamburger-menu{
+
+    &:first-child{
+        transform-origin: right;
+        transition: all ease .5s;
+    }
+
+    &:last-child{
+        transform-origin: left;
+        transition: all ease .5s;
+    }
+
+    .hamburger-menu.clicked{
+
+        .lines{
+            
+            &:nth-child(2){
+                visibility: hidden;
+            }
+
+            &:first-child{
+                transform: rotate(45deg);
+            }
+            
+        }
+
+        
+    }
+}
