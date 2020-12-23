@@ -2,6 +2,7 @@
 @import '../../css/normalize';
 @import '../../css/variables';
 @import '../../css/generalization';
+@import '../../css/hamburger';
 
 .hero{
     background-color:  $midnightGreen;
@@ -506,4 +507,10 @@ footer{
         }
     }
 }
+
+::selection{
+    background-color: rgba(47, 155, 47, 0.411);
+    color: $white;
+}
+
 
