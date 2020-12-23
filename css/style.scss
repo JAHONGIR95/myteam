@@ -12,14 +12,26 @@
     top: 0;
     right: 0;
     z-index: 1;
-    width: 255px;
+    width: 0;
     height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: red;
+    // background-color: red;
+    overflow: hidden;
+    transition: all ease 1s;
+    background-image: url(../images/sidebar.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 200px;
+    background-position: bottom right;
+    background-attachment: fixed;
 
-    @media
+    @media only screen and (max-width: 576px){
+        &.opened{
+            width: 255px;
+            
+        }
+    }
 
     &-menu{
         display: flex;
@@ -36,6 +48,7 @@
             color: #FFFFFF;
             transition: all ease .5s;
             display: inline-block;
+            // transform: rotateY(90deg);
 
             &:first-child{
                 margin-bottom: 24px;
@@ -49,6 +62,15 @@
                 color: $lightCoral;
             }
 
+        }
+
+        &__button{
+            transform: scale(0) rotateY(90deg);
+            transition: all ease .5s;
+
+            &.opened{
+                transform: scale(1) rotateY(0);
+            }
         }
     }
 }
