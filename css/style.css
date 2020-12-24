@@ -585,6 +585,7 @@ body.opened {
 
 .content__title {
   max-width: 605px;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 768px) {

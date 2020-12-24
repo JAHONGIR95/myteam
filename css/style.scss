@@ -150,6 +150,7 @@
 
     &__title{
         max-width: 605px;
+        color: $white;
 
         @media only screen and (max-width: 768px){
             text-align: center;
