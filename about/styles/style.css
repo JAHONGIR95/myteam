@@ -247,6 +247,145 @@ body {
   color: #F67E7E;
 }
 
+.hamburger-menu {
+  -webkit-transition: all ease .9s;
+  transition: all ease .9s;
+  position: relative;
+  z-index: 1000;
+}
+
+.hamburger-menu .lines:first-child {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.hamburger-menu .lines:last-child {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.hamburger-menu.clicked {
+  -webkit-transform: translateX(-170px);
+          transform: translateX(-170px);
+}
+
+.hamburger-menu.clicked .lines:nth-child(2) {
+  visibility: hidden;
+}
+
+.hamburger-menu.clicked .lines:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hamburger-menu.clicked .lines:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.overlay {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+.overlay.opened {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 16, 16, 0.5);
+}
+
+body.opened {
+  overflow: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #2C6269;
+  overflow: hidden;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  background-image: url(../images/sidebar.svg);
+  background-repeat: no-repeat;
+  background-size: 100px 200px;
+  background-position: bottom right;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width: 576px) {
+  .sidebar.opened {
+    width: 255px;
+  }
+}
+
+.sidebar-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 112px;
+}
+
+.sidebar-menu__links {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  display: inline-block;
+}
+
+.sidebar-menu__links:first-child {
+  margin-bottom: 24px;
+}
+
+.sidebar-menu__links:nth-child(2) {
+  margin-bottom: 36px;
+}
+
+.sidebar-menu__links:hover {
+  color: #F67E7E;
+}
+
+.sidebar-menu__button {
+  width: 160px;
+}
+
 .hero {
   background-color: #014E56;
 }
