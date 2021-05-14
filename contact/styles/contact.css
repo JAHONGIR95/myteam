@@ -390,6 +390,27 @@ body.opened {
   background-color: #014E56;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #004047;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 12px;
+}
+
+::-moz-selection {
+  display: none;
+}
+
+::selection {
+  display: none;
+}
+
 .header {
   padding-top: 77px;
   padding-bottom: 120px;

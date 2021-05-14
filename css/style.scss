@@ -8,6 +8,22 @@
 // *********************************************************************************
 
 
+::-webkit-scrollbar{
+    width: 4px;
+
+    &-track{
+        background: #004047;
+    }
+
+    &-thumb{
+        background: #fff;
+        border-radius: 12px;
+    }
+}
+
+::selection{
+    display: none;
+}
 
 // ********************************* hero *********************************
 .hero{

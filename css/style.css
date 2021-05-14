@@ -386,6 +386,27 @@ body.opened {
   width: 160px;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #004047;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 12px;
+}
+
+::-moz-selection {
+  display: none;
+}
+
+::selection {
+  display: none;
+}
+
 .hero {
   background-color: #014E56;
 }

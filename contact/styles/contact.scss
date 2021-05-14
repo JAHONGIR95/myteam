@@ -8,6 +8,23 @@
     background-color:  $midnightGreen;
 }
 
+::-webkit-scrollbar{
+    width: 4px;
+
+    &-track{
+        background: #004047;
+    }
+
+    &-thumb{
+        background: #fff;
+        border-radius: 12px;
+    }
+}
+
+::selection{
+    display: none;
+}
+
 // ****************************HEADER******************************
 .header{
     padding-top: 77px;
